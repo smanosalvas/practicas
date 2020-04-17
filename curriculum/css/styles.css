@@ -1,0 +1,314 @@
+/**FONTS **/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/**ICONOS**/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('icons/icomoon.eot?3kzn4c');
+    src:  url('icons/icomoon.eot?3kzn4c#iefix') format('embedded-opentype'),
+      url('icons/icomoon.ttf?3kzn4c') format('truetype'),
+      url('icons/icomoon.woff?3kzn4c') format('woff'),
+      url('icons/icomoon.svg?3kzn4c#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-profile:before {
+    content: "\e923";
+  }
+  .icon-phone:before {
+    content: "\e942";
+  }
+  .icon-location:before {
+    content: "\e947";
+  }
+  .icon-display:before {
+    content: "\e956";
+  }
+  .icon-briefcase:before {
+    content: "\e9ae";
+  }
+  .icon-sphere:before {
+    content: "\e9c9";
+  }
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  .icon-linkedin:before {
+    content: "\eac9";
+  }
+  
+
+
+/**FIN ICONOS**/
+
+:root{
+    --color-primary: #3a3a3c;
+    --color-light: white;
+    --color-primary-font: #f2f2f2;
+    --color-secondary: #6e6e70;
+    --color-hover-primary:#e8eb54;
+
+    --font-primary: 'Lato', sans-serif;
+
+    --margin-left-information: 75px;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-primary);
+    letter-spacing: 1px;
+}
+
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(200px,300px) minmax(200px,600px);
+}
+
+.title{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.personal__information{
+    background-color: var(--color-primary);
+    display: grid;
+    grid-template-rows: 190px minmax(200px,300px) 1fr 100px;
+}
+
+.personal__photo {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.personal__photo img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.personal__contact, 
+.personal__skills, 
+.personal__followInfo{
+    color: var(--color-primary-font);
+    padding: 15px 0px 0px 25px;
+}
+
+.personal__contact .contact{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.personal__contact--section, 
+.personal__skills--section,
+.personal__followInfo--section{
+    padding-top: 15px;
+    border-top: 1px solid var(--color-primary-font);
+}
+
+.personal__contact--section .contact{
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact__info{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.personal__skills--section .skill{
+    margin-bottom: 18px;
+}
+
+.personal__skills--section .skill__title{
+    font-size: 0.8em;
+}
+
+.personal__skills--section .skill--level{
+    margin: 10px 0;
+}
+
+.skill .skill--level{
+    width: 85%;
+    height: 10px;
+    background-color: var(--color-secondary);
+}
+
+
+.skill .skill--level .skill--actual--level{
+    width: 85%;
+    height: 10px;
+    background-color: white;
+}
+
+.personal__followInfo--section{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 50px);
+}
+
+.follow_me a{
+    text-decoration: none;
+}
+
+.follow_me i{
+    color: var(--color-primary-font);
+}
+
+.follow_me i:hover{
+    color: var(--color-hover-primary);
+}
+
+.information{
+    display: grid;
+    grid-template-rows: 150px 1fr 1fr 150px;
+    row-gap: 30px;
+}
+
+.information_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: var(--margin-left-information);
+}
+
+.information_header h1{
+    font-size: 2em;
+    color: var(--color-primary);
+}
+
+.information_header h3{
+    font-size: 1.5em;
+    color: var(--color-secondary);
+}
+
+.information__experience{
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    row-gap: 15px;
+}
+
+.information__experience .experience--title{
+    display: flex;   
+    margin-left: var(--margin-left-information);
+    width: 80%;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.information__experience .experience--title i{
+    background-color: var(--color-secondary);
+    width: 18px;
+    height: 18px;
+    padding: 4px;
+    margin-right: 1em;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1em;
+    color: var(--color-primary-font);
+    
+}
+.information__experience .experience__information{
+    display: flex;
+    width: 80%;
+    margin-left: var(--margin-left-information);
+    font-size: .8em;
+}
+
+.information__experience .experience__information--time{
+    width: 30%;
+    padding-right: 10px;
+}
+
+.information__experience .experience__information--description{
+    width: 80%;
+    color: var(--color-primary);
+    text-align: justify;
+}
+
+.information__experience .experience__information--description .subtitle{
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.information__experience .references{
+    display: flex;
+    width: 80%;
+    margin-left: var(--margin-left-information);
+    justify-content: space-between;
+}
+
+.information__experience .references .nameReference{
+    font-weight: 800;
+}
+
+@media screen and (max-width: 480px){
+    :root{
+        --margin-left-information: 25px;
+    }
+
+    body{
+        font-size: 1.1em;
+    }
+
+    .main{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .personal__contact, 
+    .personal__skills, 
+    .personal__followInfo{
+    color: var(--color-primary-font);
+    padding: 10px 0px 0px 20px;
+    }
+
+
+    .personal__information{
+        background-color: var(--color-primary);
+        display: grid;
+        grid-template-rows: 190px minmax(200px,300px) 1fr 100px;
+    }
+
+    .information__experience .references{
+        display: block;
+        width: 100%;
+        
+    }
+
+    .information__experience .references .reference{
+        margin-bottom: 15px;
+    }
+}
